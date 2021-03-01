@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <img id="gb__bg" src="./images/Nintendo_Gameboy.png" /> -->
+
+    <div id="logo"></div>
+    <div id="controls"></div>
+    <div id="inventory"></div>
+
+    <div id="text-box" >
+      <p id="text-box-text">
+        Systems online... vitals low.. 
+        <br>
+        craft.. damaged.. repairs needed....
+        <br>
+        Seek shelter beyond the gates
+      </p>
+    </div>
+    <div id="background-con">
+      <div id="game-container">
+        <div id="game__over">
+          <h1>GAME OVER</h1>
+          <p>
+            Do you want to retry? Y / N
+            <!-- <button id="restart__yes">Y</button>
+            <button id="restart__no">N</button> -->
+          </p>
+        </div>
+        <div id="oxygen-bar">
+          <h2>oxygen</h2>
+          <!-- <hr id="ox-bar" value="100" max="100"></hr> -->
+          <progress id="ox-bar" value="100" max="100"></progress>
+        </div>
+        
+        <div id="health">
+          <h2>health</h2>
+          <!-- <hr id="ox-bar" value="100" max="100"></hr> -->
+          <progress id="health-bar" value="30" max="100" ></progress>
+        </div>
+  
+        <img
+          id="astro-man"
+          src="./images/pixel_dude2.png"
+          class="astro--guy"
+          class="animate__animated animate__fadeIn"
+        />
+  
+        <!-- <img id="gb__bg" src="./images/Nintendo_Gameboy.png" /> -->
+        <div id="game_page0" class="animate__animated animate__fadeIn">
+          <div id="loading__title" class="animate__animated animate__fadeIn">
+            <h1>The Space Jockey</h1>
+            <p>Press the space bar to begin</p>
+          </div>
+        </div>
+        <div id="game_page1">
+          <hr id="gates"></hr>
+        </div>
+        <div id="game_page2">
+          <hr id="gates2"></hr>
+        </div>
+        <div id="game_page3">
+          <section class="nes-container">
+            <section class="message -right">
+              <!-- Balloon -->
+              <div class="nes-balloon from-right">
+                <p>Warning!! All outside travellers must attend quarantine and register at the high office.. failure to do so will result in imprisonment!! And maybe worse!!</p>
+              </div>
+              <!-- <i class="nes-bcrikko"></i> -->
+            </section>
+          </section>
+        </div>
+        <div id="game_page4"></div>
+        <div id="game_page4"></div>
+      </div>
+
+
+
+    </div>
+
+
+    
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,360 @@
+@import "./node_modules/nes.css/css/nes.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./images/wooden-background_24972-623.jpg);
+    // background-image: url(./images/gameboyadvance.png);
+    // background-repeat: no-repeat;
+    // background-size: 1000px, 1000px;
+    // padding-bottom: 90px;
+
+    // .nes-progress {
+    //     height: 25px;
+    // }
+    position: fixed;
+}
+
+#background-con {
+    position: relative;
+    // display: inline-flex;
+    height: 1000px;
+    width: 1000px;
+    background-image: url(./images/gameboyadvance.png);
+    background-repeat: no-repeat;
+    // background-size: contain;
+    margin-top: 100px;
+}
+
+#game__over {
+    position: absolute;
+    color: white;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 7px;
+    animation: animate 1s linear infinite;
+    z-index: 2;
+    display: none;
+
+    @keyframes animate {
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0.7;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+#oxygen-bar {
+    display: inline-flex;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 7px;
+
+    margin: 10px;
+    display: none;
+}
+
+#oxygen-bar h2 {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 4px;
+}
+
+#ox-bar {
+    // background-color: green;
+    margin-top: 2px;
+    width: 100px;
+    height: 20px;
+    margin-right: 2px;
+    border: 2px dashed white;
+}
+
+#health {
+    display: inline-flex;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    font-size: 7px;
+    margin: 10px;
+    display: none;
+
+    h2 {
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 6px;
+        // padding-left: 10px;
+
+    }
+
+    // display: none;
+    #health-bar {
+        border: 2px dashed white;
+        // background-color: rgb(212, 59, 59) !important;
+        margin-top: 4px;
+        width: 100px;
+        height: 20px;
+        margin-right: 2px;
+        animation: animate 1s linear infinite;
+
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+    #health-bar::-webkit-progress-value {
+        background: red;
+    }
+
+
+
+}
+
+.message -left {
+    display: none;
+}
+
+.astro--guy {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    display: none;
+}
+
+#gb__bg {
+    // position: relative;
+    height: 1600px;
+    width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#gates {
+    position: absolute;
+    // height: 1px;
+    width: 120px;
+    // color: white;
+    // z-index: 2;
+
+    right: 41%;
+    bottom: 5%;
+    margin: auto;
+    border-top: 2px solid white;
+}
+
+#gates2 {
+    position: absolute;
+    // height: 1px;
+    width: 120px;
+    // color: white;
+    // z-index: 2;
+
+    right: 40%;
+    bottom: 2%;
+    margin: auto;
+    border-top: 2px solid white;
+}
+
+#loading__title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    color: rgba(135, 209, 228, 1);
+    z-index: 2;
+    // filter: url(#extrude);
+    // display: none;
+    // animation: animate 1.5s linear infinite;
+
+    // @keyframes animate {
+    //     0% {
+    //         opacity: 0;
+    //     }
+
+    //     50% {
+    //         opacity: 0.7;
+    //     }
+
+    //     100% {
+    //         opacity: 0;
+    //     }
+    // }
+    h1 {
+        font-family: "Cyberspace Raceway Front Regular";
+    }
+
+    p {
+        color: white;
+    }
+}
+
+#game-container {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    border: 2px solid grey;
+    left: 20%;
+    top: 13.5%;
+
+
+    #game_page0 {
+        height: 600px;
+        width: 600px;
+        border: 2px solid grey;
+        background: radial-gradient(#050526 0%, black 90%) -20vw 10vh no-repeat black;
+
+        // display: none;
+
+        .animate__animated.animate__fadeOut {
+            --animate-duration: 4s;
+        }
+    }
+
+    #game_page1 {
+        height: 600px;
+        width: 600px;
+        border: 2px solid grey;
+        background-image: url(./images/download.png);
+        display: none;
+
+        .animate__animated.animate__fadeIn {
+            --animate-duration: 8s;
+        }
+    }
+
+    #game_page2 {
+        height: 600px;
+        width: 600px;
+        background-image: url(./images/scene2edit.png);
+        border: 2px solid grey;
+        display: none;
+    }
+
+    #game_page3 {
+        height: 600px;
+        width: 600px;
+        border: 2px solid grey;
+        display: none;
+    }
+
+    #game_page4 {
+        height: 600px;
+        width: 600px;
+        border: 2px solid grey;
+        display: none;
+    }
+
+    #game_page5 {
+        height: 600px;
+        width: 600px;
+        border: 2px solid grey;
+        display: none;
+    }
+
+
+}
+
+#text-box {
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+    width: 500px;
+    height: 100px;
+    margin: auto;
+    border: 2px dotted white;
+    margin-bottom: 5px;
+    display: none;
+    z-index: 2;
+
+    #text-box-text {
+        overflow: hidden;
+        font-size: 14px;
+        // padding: 10px;
+        white-space: nowrap;
+        margin: 10px;
+        color: white;
+        text-transform: uppercase;
+
+        // .animate__animated.animate__fadeOut {
+        //     --animate-duration: 7s;
+        // }
+
+        // animation:
+        //     typing 3.5s steps(40, end),
+        //     blink-caret .75s step-end infinite;
+
+        // border: 1px solid lightblue;
+        // background-color: grey;
+        // @keyframes typing {
+        //     from {
+        //         width: 0
+        //     }
+
+        //     to {
+        //         width: 100%
+        //     }
+        // }
+    }
+}
+
+// .animate__animated.animate__fadeIn {
+//     --animate-duration: 2s;
+// }
+
+// .animate__animated.animate__fadeOut {
+//     --animate-duration: 2s;
+// }
+
+.nes-container {
+    // top: 90;
+    top: 50%;
+    display: absolute;
+    border: none;
+
+}
